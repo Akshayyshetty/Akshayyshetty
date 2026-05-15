@@ -1,10 +1,11 @@
-- 👋 Hi, I’m @Akshayyshetty
-- 👀 I’m interested in ...
-- 🌱 I’m currently learning ...
-- 💞️ I’m looking to collaborate on ...
-- 📫 How to reach me ... instagram akshayshettyyy
+# Hi, I'm Akshay Shetty 👋
 
-<!---
-Akshayyshetty/Akshayyshetty is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
---->
+🚀 Robotics & Automation Engineering Student  
+🤖 Interested in AI, Computer Vision, Robotics & Autonomous Systems  
+🎥 Photographer | Videographer | Video Editor  
+🛠️ Working on Arduino, OpenCV, TensorFlow & Embedded Systems  
+✈️ Exploring opportunities in Aviation & UAV Systems 
+
+📫 Connect With Me
+- LinkedIn:  https://www.linkedin.com/in/akshay-v-shetty-2269451a4/
+- Instagram: https://www.instagram.com/akshay.shettyyy?igsh=NG03anQ1NmY5dDJn&utm_source=qr
