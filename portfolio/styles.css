@@ -1,0 +1,412 @@
+/* --- 1. CSS VARIABLES (Design Tokens) --- */
+/* These define our color palette and sizing so we can reuse them easily. */
+:root {
+    --bg-color: #0f172a;        /* Deep space blue/black for background */
+    --text-primary: #f8fafc;    /* Very light gray for main text */
+    --text-secondary: #94a3b8;  /* Dimmer gray for secondary text */
+    --accent-color: #0ea5e9;    /* Vibrant cyan/blue for highlights and buttons */
+    --accent-hover: #0284c7;    /* Slightly darker cyan for hover effects */
+    --nav-bg: rgba(15, 23, 42, 0.8); /* Semi-transparent background for navbar */
+    
+    --font-main: 'Inter', sans-serif;
+}
+
+/* --- 2. RESET & BASE STYLES --- */
+/* Removes default browser margins/padding to give us a clean slate */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Smooth scrolling when clicking nav links */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    font-family: var(--font-main);
+    line-height: 1.6;
+    overflow-x: hidden; /* Prevents horizontal scrolling issues */
+}
+
+/* --- 3. NAVIGATION BAR --- */
+.navbar {
+    position: fixed; /* Stays at the top while scrolling */
+    top: 0;
+    width: 100%;
+    padding: 1.5rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--nav-bg);
+    backdrop-filter: blur(10px); /* Creates the "glassmorphism" blur effect */
+    z-index: 1000; /* Ensures it stays on top of other content */
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    list-style: none; /* Removes bullet points */
+    display: flex;
+    gap: 2rem; /* Spacing between links */
+}
+
+.nav-links a {
+    color: var(--text-primary);
+    text-decoration: none; /* Removes underlines */
+    font-weight: 600;
+    transition: color 0.3s ease; /* Smooth color change on hover */
+}
+
+.nav-links a:hover {
+    color: var(--accent-color);
+}
+
+/* --- 4. HERO SECTION --- */
+/* The main intro section that fills the screen */
+.hero {
+    height: 100vh; /* 100% of the viewport height */
+    display: flex;
+    align-items: center;
+    padding: 0 5%;
+    /* Subtle gradient background for depth */
+    background: radial-gradient(circle at top right, #1e293b, transparent 40%);
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    line-height: 1.1;
+}
+
+.highlight {
+    color: var(--accent-color);
+}
+
+.hero p {
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    max-width: 600px;
+}
+
+/* --- 5. BUTTON STYLES --- */
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.primary-btn {
+    background-color: var(--accent-color);
+    color: white;
+    border: 2px solid var(--accent-color);
+}
+
+.primary-btn:hover {
+    background-color: transparent;
+    color: var(--accent-color);
+    box-shadow: 0 0 15px rgba(14, 165, 233, 0.4); /* Glowing effect */
+}
+
+/* --- 6. COMMON SECTION STYLES --- */
+section {
+    padding: 100px 5%;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+/* --- 7. ABOUT SECTION --- */
+.about {
+    background-color: var(--bg-color);
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    background: rgba(30, 41, 59, 0.5); /* Slightly lighter background for the card */
+    padding: 3rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.05); /* Subtle border for glass effect */
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+}
+
+.about-text strong {
+    color: var(--text-primary);
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.skill-tag {
+    background-color: rgba(14, 165, 233, 0.1);
+    color: var(--accent-color);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border: 1px solid rgba(14, 165, 233, 0.2);
+}
+
+/* --- 8. PROJECTS SECTION --- */
+.projects {
+    background-color: #1e293b; /* A slightly different background color to separate sections */
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    background: var(--bg-color);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    max-width: 1000px;
+    margin: 0 auto;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+@media (min-width: 768px) {
+    .project-card {
+        flex-direction: row; /* Side-by-side layout on larger screens */
+    }
+}
+
+.project-image {
+    flex: 1; /* Takes up half the space */
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the area nicely */
+}
+
+.project-info {
+    flex: 1;
+    padding: 3rem;
+}
+
+.project-info h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+.project-desc {
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.project-features h4 {
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+.project-features ul {
+    list-style-position: inside;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+}
+
+.project-features li {
+    margin-bottom: 0.5rem;
+}
+
+.project-features strong {
+    color: var(--accent-color);
+}
+
+.secondary-btn {
+    background-color: transparent;
+    color: var(--text-primary);
+    border: 2px solid var(--text-secondary);
+    margin-right: 1rem;
+}
+
+.secondary-btn:hover {
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+}
+
+/* --- 12. EXPERIENCE SECTION (TIMELINE) --- */
+.experience {
+    background-color: var(--bg-color);
+}
+
+.timeline {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    padding: 2rem 0;
+}
+
+/* The vertical line */
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 20px;
+    height: 100%;
+    width: 2px;
+    background: rgba(14, 165, 233, 0.3);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 3rem;
+    padding-left: 60px; /* Space for the line and dot */
+}
+
+/* The dots on the line */
+.timeline-dot {
+    position: absolute;
+    left: 11px; /* Align with the line */
+    top: 5px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--accent-color);
+    border: 4px solid var(--bg-color);
+    box-shadow: 0 0 10px rgba(14, 165, 233, 0.5);
+}
+
+.timeline-content {
+    background: rgba(30, 41, 59, 0.5);
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.timeline-content h3 {
+    color: var(--text-primary);
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.timeline-content h4 {
+    color: var(--accent-color);
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.timeline-date {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+}
+
+.timeline-content p {
+    color: var(--text-secondary);
+    margin-bottom: 0.75rem;
+    font-size: 1rem;
+}
+
+.timeline-content p:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-content strong {
+    color: var(--text-primary);
+}
+
+/* --- 9. CONTACT SECTION --- */
+.contact {
+    text-align: center;
+    background-color: var(--bg-color);
+}
+
+.contact-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact p {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.social-btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 2px solid var(--text-secondary);
+    color: var(--text-primary);
+}
+
+.social-btn:hover {
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+}
+
+/* --- 10. FOOTER --- */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: #1e293b;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+/* --- 11. ANIMATIONS --- */
+/* Elements start hidden and shifted slightly down */
+.section-title, .about-content, .project-card, .contact-content, .timeline-item {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out; /* Smooth transition when classes change */
+}
+
+/* When JavaScript adds the 'show' class, they fade in and move up */
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}

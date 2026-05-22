@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akshay | Portfolio</title>
+    <meta name="description" content="Portfolio of Akshay, Robotics & Software Engineer featuring the Wireless Robotic Hand.">
+    
+    <!-- Linking our external CSS file for styling -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Google Fonts for modern typography (Inter font) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">Akshay.</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content Container -->
+    <main>
+        <!-- Hero Section (Introduction) -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>Hi, I'm <span class="highlight">Akshay</span></h1>
+                <p>I build hardware that moves and software that thinks.</p>
+                <a href="#projects" class="btn primary-btn">View My Work</a>
+            </div>
+        </section>
+        
+        <!-- About Section -->
+        <section id="about" class="about">
+            <h2 class="section-title">About <span class="highlight">Me</span></h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Hello! I'm <strong>Akshay V Shetty</strong>, a 4th Year Engineering Student at Sahyadri College of Engineering & Management.</p>
+                    <p>I have a deep passion for the intersection of <strong>hardware and software</strong>. My work focuses on building intuitive, real-time control systems that allow humans to interact naturally with machines.</p>
+                    <p>When I'm not coding or wiring up Arduino boards, I'm constantly exploring new ways to push the boundaries of robotics, computer vision, and embedded systems.</p>
+                    
+                    <div class="skills">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">C++</span>
+                        <span class="skill-tag">Computer Vision (OpenCV)</span>
+                        <span class="skill-tag">Machine Learning (MediaPipe)</span>
+                        <span class="skill-tag">Robotics (MuJoCo)</span>
+                        <span class="skill-tag">Arduino & Electronics</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects">
+            <h2 class="section-title">Featured <span class="highlight">Projects</span></h2>
+            
+            <!-- Project 1: Robotic Hand -->
+            <div class="project-card" style="margin-bottom: 4rem;">
+                <div class="project-image">
+                    <!-- Save the new black/red robot hand image to the portfolio folder as robotic-hand.jpg -->
+                    <img src="robotic-hand.jpg.png" alt="Physical Robotic Hand">
+                </div>
+                <div class="project-info">
+                    <h3>Dual-Mode Gesture-Controlled Robotic Hand</h3>
+                    <p class="project-desc">A complete hardware and software system that enables natural human-computer interaction by capturing hand gestures and translating them into robotic finger movements.</p>
+                    
+                    <div class="project-features">
+                        <h4>Key Features:</h4>
+                        <ul>
+                            <li><strong>Dual-Mode Control:</strong> Seamlessly toggle between a webcam (MediaPipe) and a custom wireless flex-sensor glove (nRF24L01).</li>
+                            <li><strong>Digital Twin:</strong> Real-time physics-based simulation using MuJoCo that mirrors the physical hardware.</li>
+                            <li><strong>Hardware Execution:</strong> Custom-built 3D printed arm controlled by Arduino Nanos and servos with joint-level kinematics.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="project-links">
+                        <a href="https://github.com/Akshayyshetty/Gesture-Controlled-Robotic-arm-" class="btn secondary-btn" target="_blank">View GitHub Repo</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2: Seed Dispensing Robot -->
+            <div class="project-card">
+                <div class="project-image">
+                    <!-- Update the src below to point to the images you just uploaded! (e.g., src="seed-robot.jpg") -->
+                    <img src="seed-robot.jpg.jpeg" alt="Automated Seed Dispensing Robot" style="width: 100%; height: 100%; object-fit: cover; background: #334155;">
+                </div>
+                <div class="project-info">
+                    <h3>Automated Seed Dispensing Robot</h3>
+                    <p class="project-desc">A compact, mobile robotic system designed to automate seed planting and irrigation for small-scale farms, aligning with the SDG Goal 2: Zero Hunger.</p>
+                    
+                    <div class="project-features">
+                        <h4>Key Features:</h4>
+                        <ul>
+                            <li><strong>Precision Sowing:</strong> Custom motorized dispensing mechanism ensures seeds are placed at optimal spacing and depth.</li>
+                            <li><strong>Integrated Irrigation:</strong> Equipped with an onboard 12V water pump to immediately hydrate seeds upon planting for better germination.</li>
+                            <li><strong>Autonomous Navigation:</strong> Uses an ESP32 microcontroller paired with ultrasonic sensors to avoid obstacles in real-time on uneven terrain.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="project-links">
+                        <a href="#" class="btn secondary-btn">View Project Report</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="experience">
+            <h2 class="section-title">My <span class="highlight">Experience</span></h2>
+            
+            <div class="timeline">
+                <!-- Experience 1 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Robotics Intern</h3>
+                        <h4>Technical Career Education</h4>
+                        <span class="timeline-date">Jan 2026 - May 2026</span>
+                        <p>Specialized in 3D modeling and mechanical design using SOLIDWORKS and Autodesk Fusion 360.</p>
+                    </div>
+                </div>
+
+                <!-- Experience 2 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Team Challengers</h3>
+                        <h4>Mangaluru, Karnataka, India</h4>
+                        <span class="timeline-date">Mar 2024 - Nov 2025</span>
+                        <p><strong>Head of Events (Jul 2025 - Nov 2025):</strong> Successfully led Aerophilia 2025. Coordinated, managed, and executed the entire event demonstrating strong leadership and team management.</p>
+                        <p><strong>Media and Marketing Lead (Nov 2024 - Nov 2025):</strong> Managed media content using Adobe Premiere Pro and cinematography.</p>
+                        <p><strong>Robotics Team Member (Mar 2024 - Nov 2025):</strong> Involved in robotics, 3D modeling, and aeromodelling.</p>
+                    </div>
+                </div>
+                
+                <!-- Experience 3 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Event Media & Marketing Lead</h3>
+                        <h4>Sahyadri College of Engineering & Management (SSTH 2024)</h4>
+                        <span class="timeline-date">Aug 2024 - Nov 2024</span>
+                        <p>Created effective content to reach required audiences and managed different steps of conducting the SSTH event. Interacted with students through ideation sessions.</p>
+                    </div>
+                </div>
+
+                <!-- Experience 4 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Student Mentoring and Event Management</h3>
+                        <h4>Sahyadri College of Engineering & Management (SSTH 2022)</h4>
+                        <span class="timeline-date">Sep 2022 - Nov 2022</span>
+                        <p>Mentored school and college students on project development and transforming ideas into tangible products. Took the lead in the decoration department for the three-day science fair.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <h2 class="section-title">Get In <span class="highlight">Touch</span></h2>
+            <div class="contact-content">
+                <p>I'm currently looking for new opportunities to build cool things at the intersection of hardware and software.</p>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/akshay-v-shetty-2269451a4/" target="_blank" class="social-btn">LinkedIn</a>
+                    <a href="https://www.instagram.com/akshay.shettyyy?igsh=NG03anQ1NmY5dDJn&utm_source=qr" target="_blank" class="social-btn">Instagram</a>
+                    <!-- Let the user replace the email below with their actual email -->
+                    <a href="mailto:hello@example.com" class="btn primary-btn">Email Me</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Akshay V Shetty. Built with passion and code.</p>
+    </footer>
+
+    <!-- Linking our JavaScript file for interactions -->
+    <script src="script.js"></script>
+</body>
+</html>
